@@ -1,5 +1,15 @@
 # ToDoList
 
+## Detail
+### GithubPages DEMO：https://jimmyanso.github.io/ToDoList/
+### Source：[How TO - Create a To Do List](https://www.w3schools.com/howto/howto_js_todolist.asp)
+### Deploy：[How to deploy angular app on GitHub Pages for free](https://efficientuser.com/2021/03/04/how-to-deploy-angular-app-on-github-pages-for-free/)
+### Function：
+- addToDo：使用 ViewChild, ElementRef 取得 .nativeElement.value
+- hasBeenDone：使用 (e.target as HTMLElement).classList 操控樣式
+- removeToDo ：帶入 *ngFor 的 index 並從 this.list 中刪除
+- enterPress：enterPress(e: KeyboardEvent) 當 e.key == "Enter" 觸發 this.addToDo();
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.4.
 
 ## Development server
