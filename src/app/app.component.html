@@ -1,0 +1,12 @@
+<div class="header">
+  <h2 class="header__title">{{title}}</h2>
+  <input class="header__input" type="text" placeholder="Title..." #my_input>
+  <span class="header__button">Add</span>
+</div>
+
+<ul>
+  <li *ngFor="let item of list; let i = index">
+    {{item}}
+    <span class="close">&#215;</span> 
+  </li>
+</ul>
