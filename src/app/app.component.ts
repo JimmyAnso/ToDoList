@@ -11,7 +11,6 @@ export class AppComponent {
   list: any[] = ["Hit the gym", "Pay bills", "Meet George", "Buy eggs", "Read a book", "Organize office"];
 
   enterPress(e: KeyboardEvent) {
-    console.log(e.key);
     if (e.key == "Enter") {
       this.addToDo();
     }
@@ -21,13 +20,16 @@ export class AppComponent {
     if (inputValue == "") {
       alert("You must write something!");
     }
+    else if (this.list.indexOf(inputValue) != -1) {
+      alert("This task has been existed!");
+    }
     else {
       this.list.push(inputValue);
       this.myInput.nativeElement.value = "";
     }
   }
 
-  hasBeenDone(e: Event) {
+  hasBeenDone(e: MouseEvent) {
     var classList = (e.target as HTMLElement).classList;
     if (classList[0] == 'checked') {
       classList.remove("checked");
@@ -35,6 +37,7 @@ export class AppComponent {
     else {
       classList.add("checked");
     }
+
   }
 
   removeToDo(removeIndex: number) {
